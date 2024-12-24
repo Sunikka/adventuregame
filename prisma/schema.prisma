@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  username String @unique
+  char Character
+}
+
+model Character {
+  id Int @id @default(autoincrement())
+    level Int
+
+    // Resources
+    health Int
+    stamina Int
+    mana Int
+    skills Skill[]
+
+    // Resistances 
+    physicalResistance Int
+    magicResistance Int
+    mentalResistance Int
+
+    // Stats
+    strength Int 
+    intelligence Int
+    psychic Int
+    blockChance Float
+    owner User @relation(fields: [ownerId], references: [id])
+    ownerId Int
+}
+
+model Skill {
+  id Int @id @default(autoincrement())
+  name String @unique
+  description String
+  strScale Float
+  intScale Float
+  psychScale Float
+  dmgType DamageType
+  Cooldown Int
+}
+
+enum DamageType {
+  Physical
+  Magical
+  Mental
+}
+
+model Effect {
+  id Int @id @default(autoincrement())
+  type EffectType
+  value Float
+  duration Int
+  skillId Int
+  skill Skill @relation(fields: [skillId], references: [id])
+}
+
+enum EffectType{
+  Stun // Make enemy skip a turn
+  Confusion // Chance to make enemy attack themselves
+  Bleed // Take damage in the end of the turn
+}
