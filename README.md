@@ -1,8 +1,18 @@
-## Turn based roguelike RPG in typescript
+## Roguelike auto-battler in typescript
 
-I had an idea to create an adventure quest clone as a small project for my vacation to get accustomed with Node ecosystem again. (work in progress)
+I decided to get back into nodeJS and typescript during my christmas vacation, so I had an idea to create an autobattler that runs in the browser. It's a work in progress.
 
-## Planned Tech Stack:
-    - Plain HTML, CSS, JS frontend
-    - TS, Express, Prisma and SQLite backend
-        - Decided to try an ORM this project as well
+![Alt text](./readme_img.png "Screenshot from the current state")
+
+### Tech stack:
+Frontend:
+    - HTML 
+    - CSS 
+    - vanilla JS
+
+Backend:
+    - NodeJS
+    - Express
+    - Typescript
+    - Prisma
+    - Postgres

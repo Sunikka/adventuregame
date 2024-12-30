@@ -1,7 +1,17 @@
 import express, { request, response } from "express";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const frontPath: string | undefined = process.env.FRONTEND_DIR
+if (!frontPath) {
+	throw new Error(`Environment variable for static files not found`)
+}
+
+// Serve the frontend
+app.use("/", express.static(frontPath))
+
 
 // Get all users
 app.get("/users", (req, res) => {
@@ -28,6 +38,6 @@ app.delete("/users/{id}", (req, res) => {
 	res.send("Hello world!");
 })
 
-app.listen(port, () => {
-	console.log(`App listening on port ${port}`);
+app.listen(process.env.PORT, () => {
+	console.log(`App listening on port ${process.env.PORT}`);
 })

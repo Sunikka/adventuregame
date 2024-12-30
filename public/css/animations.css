@@ -1,0 +1,98 @@
+
+.player-sprite-container {
+	width: 480px;
+	height: 480px;
+	overflow: hidden;
+}
+
+.opponent-sprite-container {
+	width: 480px;
+	height: 480px;
+	overflow: hidden;
+}
+
+.player-sprite-idle {
+	width: 4800px;
+	height: 480px;
+	background-image: url("../assets/main_char/Sprites/idle.png");
+	background-repeat: no-repeat;
+	animation: play-sprite-idle 1.2s steps(10) infinite;
+	background-size: cover;	
+	image-rendering: pixelated;
+}
+
+.opponent_sprite {
+	width: 4800px;
+	height: 480px;
+	background-image: url("../assets/main_char/Sprites/idle.png");
+	background-repeat: no-repeat;
+	animation: play-sprite-idle-opponent 1.2s steps(10) infinite;
+	background-size: 4800px 480px;	
+	image-rendering: pixelated;
+	
+	// Recycled the main character with inverted colors as a placeholder
+	transform: scaleX(-1);
+	filter: invert(1);
+}
+
+
+
+.player-sprite-attack {
+	width: 3360px;
+	height: 480px;
+	background-image: url("../assets/main_char/Sprites/attack.png");
+	background-repeat: no-repeat;
+	animation: play-sprite-attack 0.5s steps(7) infinite;
+	background-size: cover;	
+	image-rendering: pixelated;
+}
+
+.player-sprite-run {
+	width: 7680px;
+	height: 480px;
+	background-image: url("../assets/main_char/Sprites/run.png");
+	background-repeat: no-repeat;
+	animation: play-sprite-run 0.3s steps(16) infinite;
+	background-size: cover;	
+	image-rendering: pixelated;
+}
+
+@keyframes play-sprite-idle {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-4800px);
+	}
+}
+
+@keyframes play-sprite-idle-opponent {
+	from {
+		transform: translateX(0) scaleX(-1);
+	}
+
+	to {
+		transform: translateX(-4800px) scaleX(-1);
+	}
+}
+
+@keyframes play-sprite-attack {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-3360px);
+	}
+}
+
+@keyframes play-sprite-run {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-7680px);
+	}
+}

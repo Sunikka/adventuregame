@@ -1,0 +1,189 @@
+@font-face {
+	font-family: "DepartureMonoNerd";
+	src: url("../assets/fonts/DepartureMonoNerdFontMono-Regular.otf") format('opentype');
+	font-weight: normal;
+	font-style:normal;
+}
+
+body {
+	font-family: "DepartureMonoNerd", monospace;
+	margin: 0;
+	padding: 0;
+	background-color: #222;
+	color: #fff;
+}
+
+
+.dev-tool {
+	position:  absolute;
+	left: 100px;
+}
+
+#game-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 10px;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+#game-area {
+	position: relative;
+	width: 1700px;
+	height: 900px;
+	background: url("../assets/forest-background.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 20px;
+	box-shadow: 8px 4px 4px black;
+}
+
+.level-up-menu {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	justify-content: center;
+}
+
+#level-up-container {
+	border: 1px solid #fff;
+	width: 400px;
+	height: 150px;
+}
+
+.player-sprite-container {
+	position: absolute;
+	left: 180px;
+	bottom: 50px;
+}
+
+.opponent-sprite-container {
+	position: absolute;
+	right: 180px;
+	bottom: 50px;
+}
+
+#player-bars {
+	// border: 1px dotted #00ff00;
+	position: absolute;
+	left: 40px;
+	top: 20px;
+	width: 250px;
+	height: 100px;
+}
+
+.player-bar {
+	border-radius: 5px;
+	box-shadow: 2px 3px #161716; 
+	background-color: #000;
+	text-align: justify;
+}
+
+.enemy-bar-container {
+	position: absolute;
+	right: 80px;
+	top: 20px;
+	width: 250px;
+	height: 100px;
+
+}
+
+.enemy-bar {
+	border-radius: 5px;
+	box-shadow: 2px 3px #161716; 
+	background-color: #000;
+}
+
+
+#enemy-max-health {
+	height: 25px;
+	width: 250px;
+}
+
+#enemy-health-left {
+	background-color:#880808;
+	height: 25px;	
+	width: 50%;
+}
+
+#player-max-health {
+	height: 25px;
+	width: 250px;
+}
+
+#player-max-stamina {
+	height: 20px;
+	width: 200px;
+}
+
+#player-health-left {
+	background-color:#880808;
+	height: 25px;	
+	width: 80%;
+}
+
+#player-stamina-left {
+	background-color: #50C878;
+	height: 25px;	
+	width: 33%;
+}
+
+#player-spirit-left {
+	background-color: #097969;
+	height: 25px;	
+	width: 90%;
+}
+
+
+
+
+
+#selection-ui {
+	display: flex;
+	gap: 10px;
+}
+
+
+
+button {
+	padding: 10px 20px;
+	margin: 10px;
+	font-family: "DepartureMonoNerd", monospace;
+	border: none;
+	border-radius: 5px;
+	background: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+button:hover {
+	font-size: 18px;
+	color:  #F28C28;
+}
+
+footer {
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+
+
