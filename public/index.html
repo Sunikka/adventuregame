@@ -15,39 +15,51 @@
 		</header>	
 		<main>
 			<div id="game-area">
-				<div class="player-sprite-container">
+				<div id="player-sprite-container">
 					<div class="player-sprite-idle" id="player"></div>	
 				</div>
 
 				<div id="player-bars">
 					<div class="player-bar" id="player-max-health">
 						<div class="player-bar" id="player-health-left">
-							<p>80/100</p>	
+							<p>100/100</p>	
 						</div>	
 					</div>
 					<div class="player-bar" id="player-max-stamina">
 						<div class="player-bar" id="player-stamina-left">
-							<p>25/75</p>
+							<p>75/75</p>
 						</div>
 					</div>
 					<div class="player-bar" id="player-max-spirit">
 						<div class="player-bar" id="player-spirit-left">
-							<p>45/50</p>
+							<p>50/50</p>
+						</div>
+					</div>
+				</div>
+					<div id="opponent-bars">
+					<div class="opponent-bar" id="opponent-max-health">
+						<div class="opponent-bar" id="opponent-health-left">
+							<p>100/100</p>	
+						</div>	
+					</div>
+					<div class="opponent-bar" id="opponent-max-stamina">
+						<div class="opponent-bar" id="opponent-stamina-left">
+							<p>75/75</p>
+						</div>
+					</div>
+					<div class="opponent-bar" id="opponent-max-spirit">
+						<div class="opponent-bar" id="opponent-spirit-left">
+							<p>50/50</p>
 						</div>
 					</div>
 				</div>
 				
-				<div class="opponent-sprite-container" id="opponent">
-					<div class="opponent_sprite"></div>	
+				<div id="opponent-sprite-container" >
+					<div class="opponent-sprite-idle" id="opponent"></div>	
 				</div>
+				
 
-				<div class="enemy-bar-container">
-					<div class="enemy-bar" id="enemy-max-health">
-						<div class="enemy-bar" id="enemy-health-left">
-							<p>50/100</p>	
-						</div>
-					</div>
-				</div>
+				<button id="start-battle">Start battle</button>
 				<div class="level-up-menu" id="level-up-container">	
 					<h3>LEVEL UP!</h3>
 					<div class="level-up-menu" id="selection-ui">
@@ -57,8 +69,14 @@
 					</div>				
 				</div>
 
+				<div class = "dev-panel">
+					<h3> Developer tools </h3>
+					<button class="dev-tool" id="toggle-run">toggle running</button>
+					<button class="dev-tool" id="toggle-attack">toggle attack</button>
+				</div>
 
-				<button class="dev-tool" id="animation-switch">Switch Animation</button>
+
+
 			</div>
 		
 

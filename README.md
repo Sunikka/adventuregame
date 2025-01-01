@@ -16,3 +16,9 @@ Backend:
     - Typescript
     - Prisma
     - Postgres
+
+### Asset credits:
+<ul>
+    <li>https://xzany.itch.io/samurai-2d-pixel-art</li>
+    <li>https://www.spriteland.com/sprites/tall-trees-background</li>
+</ul>
